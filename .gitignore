@@ -1,5 +1,6 @@
 # ___MY IGNORE___
 .idea/
+build
 node_modules
 npm-debug.log
 
