@@ -1,0 +1,29 @@
+header.header
+    .header__top
+        .container
+            .contacts
+                a.contact(href="tel:+380987322323")
+                    i.fa.fa-mobile.contact__icon
+                    span +380987322323
+
+                a.contact(href="mailto: business@gmail.com")
+                    i.fa.fa-envelope.contact__icon.contact__icon--email
+                    span business@gmail.com
+
+                a.facebook(href = "https://www.facebook.com")
+                    i.fa.fa-facebook-square
+    .container
+        .header__bottom
+            .logo: img.logo__picture(src="../../images/logo.png", alt="main-logo")
+
+            nav.nav
+                - var navLinks = {"Home": "#home", "About us": "#aboutUS", "Our approach": "#approach", "Our work": "#ourWork"}
+
+                each linkValue, linkName in navLinks
+                    if linkName === "Home"
+                        a.nav__link.nav__link--active(href= linkValue)= linkName
+                    else
+                        a.nav__link(href= linkValue)= linkName
+                    
+
+            a.button.header__button.button--red(href="#") Free Consultation

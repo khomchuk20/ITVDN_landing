@@ -1,0 +1,60 @@
+.header {
+    &__top{
+        border: 1px solid #e2e2e2;
+        background-color: $main-gray;
+    }
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: center;
+        padding: 25px 0 20px;
+    }
+
+}
+
+.contacts{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px 10px;
+    vertical-align: top;
+    color: $main-text-color;
+    transition: 0.3s;
+
+        &:hover{
+            color: lighten($main-text-color, 20%);
+        }
+
+        &:first-child{
+            padding-right: 19px;
+            border-right: 1px solid #e2e2e2;
+            margin-right: 10px;
+        }
+
+        &__icon{
+            margin-right: 7px;
+            vertical-align: middle;
+            font-size: 1.5rem;
+
+            &--email{
+                font-size: 1.2rem;
+            }
+        }
+}
+
+.facebook{
+    align-self: center;
+    font-size: 1.5rem;
+    color: $main-text-color;
+    margin-left: 10px;
+    transition: 0.3s;
+
+    &:hover{
+        color: lighten($main-text-color, 20%);
+    }
+}

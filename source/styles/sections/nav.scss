@@ -1,0 +1,36 @@
+.nav{
+    display: flex;
+    width: 600px;
+    justify-content: flex-end;
+    align-items: center;
+
+    &__link{
+        display: inline-block;
+        vertical-align: top;
+        padding: 10px;
+        font-family: $ff-main-bold;
+        color: $main-text-color;
+        text-transform: capitalize;
+        transition: 0.3s;
+        font-size: 0.9rem;
+
+        &:hover,
+        &--active{
+            color: $main-red;
+        }
+        &:after{
+            content: '';
+            display: inline-block;
+            vertical-align: middle;
+            border-radius: 50%;
+            background-color: $main-text-color;
+            width: 5px;
+            height: 5px;
+            margin-left: 15px;
+        }
+
+        &:last-child::after{
+            display: none;
+        }
+    }
+}

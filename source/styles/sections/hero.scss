@@ -1,0 +1,25 @@
+.hero{
+    height: calc(100vw / 2.4);
+    background-image: url(../../images/hero-bg.jpg);
+    background-position: center;
+    background-size: cover;
+    text-align: center;
+    padding-top: calc((100vw / 2.4)/3);;
+
+    
+
+    &__title{
+        font-family: $ff-main-bold;
+        font-size: 2.5rem;
+        letter-spacing: 0.2rem;
+        color: #fff;
+    }
+
+    &__description{
+        font-family: $ff-main;
+        font-size: 1.5rem;
+        letter-spacing: 0.1rem;
+        color: #fff;
+        margin-bottom: 35px;
+    }
+}

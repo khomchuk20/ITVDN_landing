@@ -39,22 +39,13 @@ gulp.task('styles:compile', function () {
       .pipe(sourcemaps.init())
       .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
       .pipe(autoprefixer({
-        browsers: ['last 2 versions'],
+        overrideBrowserslist: ['last 2 versions'],
         cascade: false
       }))
       .pipe(rename('main.min.css'))
       .pipe(sourcemaps.write('./'))
       .pipe(gulp.dest('build/css'));
   });
-
-// // ----------  Autoprefixer  ------------
-// exports.default = () => (
-//   gulp.src('src/app.css')
-//       .pipe(autoprefixer({
-//           cascade: false
-//       }))
-//       .pipe(gulp.dest('dist'))
-// );
 
 // ----------  SEPARATE IMAGE (spritesmith) ------------
 gulp.task('sprite', function (cb) {

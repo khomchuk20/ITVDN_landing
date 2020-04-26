@@ -1,0 +1,26 @@
+.button{
+    display: inline-block;
+    border-radius: 3px;
+    color: #fff;
+    font-family: $ff-main-bold;
+    padding: 10px 20px;
+    transition: 0.5s;
+    font-size: 0.9rem;
+
+    &--red{
+        
+        background-color: $main-red;
+
+        &:hover{
+            background-color: lighten($main-red, 10%);
+        }
+    }
+    
+    &--yellow{
+        background-color: #f8cd53;
+        padding: 20px 40px;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        border-radius: 6px;
+    }
+}
