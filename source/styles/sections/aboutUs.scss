@@ -1,0 +1,33 @@
+.about{
+    padding: 100px 0;
+
+    &__list{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        padding-top: 50px;
+    }
+
+    &__item{
+        max-width: 250px;
+        text-align: center;
+        
+        
+        @media (max-width: 770px) {
+            padding-bottom: 50px;
+        }
+    }
+
+    &__header{
+        font-size: 1.2rem;
+        font-family: $ff-main-bold;
+        color: $main-text-color
+    }
+
+    &__description{
+        font-size: 1rem;
+        font-family: $ff-main-light;
+        color: $main-text-color;
+        letter-spacing: 0.1rem;
+    }
+}

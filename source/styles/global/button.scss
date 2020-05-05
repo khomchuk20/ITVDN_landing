@@ -22,5 +22,9 @@
         font-size: 1.2rem;
         text-transform: uppercase;
         border-radius: 6px;
+
+        &:hover{
+            background-color: lighten(#f8cd53, 10%);
+        }
     }
 }
