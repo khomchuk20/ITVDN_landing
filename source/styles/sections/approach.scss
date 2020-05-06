@@ -1,0 +1,99 @@
+.approach{
+    color: $main-text-color;
+    padding: 100px 0;
+    background-color: #f3f3f3;
+
+    &__list{
+        margin: 0;
+        padding: 0;
+        counter-reset: count;
+    }
+
+    &__item{
+        max-height: 240px;
+        margin-bottom: 40px;
+        border-radius: 5px;
+        box-shadow: -1px -1px 10px 1px rgba(214, 214, 214, 1);
+        display: flex;
+        flex-direction: row;
+
+        &:nth-child(2n){
+            flex-direction: row-reverse;
+            text-align: right;
+
+            .approach__text{
+                padding: 70px 90px 70px 75px;
+            }
+
+            .approach__picture{
+                border-radius: 0 5px 5px 0;
+            }
+
+            .approach__step{
+                right: auto;
+                left: -50px;
+            }
+        }
+    }
+
+    &__image{
+        flex-basis: 35%;
+        position: relative;
+    }
+
+    &__picture{
+        display: block;
+        width: 100%;
+        height: 100%;
+        border-radius: 5px 0 0 5px;
+    }
+    
+    &__step{
+        @include centerer-y;
+
+        right: -50px;
+        width: 100px;
+        height: 100px;
+        padding-top: 10px;
+        border-radius: 5px;
+        border: 2px solid #fff;
+        background-color: $main-red;
+        text-align: center;
+        font-size: 1.2rem;
+        color: #fff;
+        font-family: $ff-main-bold;
+        
+        &::before{
+            content: counter(count);
+            counter-increment: count;
+            display: block;
+            font-family: $ff-steps;
+            font-size: 3rem;
+            line-height: 1;
+            color: #fff;
+        }
+    }
+
+    &__text{
+        flex-basis: 65%;
+        padding: 70px 70px 70px 90px;
+        
+    }
+
+    &__title{
+        font-size: 1.2rem;
+        font-family: $ff-main-bold;
+        color: $main-text-color;
+        margin-bottom: 15px;
+    }
+
+    &__description{
+        font-size: 0.8rem;
+        font-family: $ff-main-light;
+        color: $main-text-color;
+        letter-spacing: 0.08rem;
+        line-height: 1.5;
+        
+    }
+
+}
