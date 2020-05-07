@@ -1,5 +1,4 @@
 .title{
-    margin-bottom: 50px;
     text-align: center;
 
     &__header{
@@ -7,6 +6,7 @@
         font-family: $ff-main-bold;
         line-height: 1;
         margin: 0 0 10px 0;
+        text-transform: capitalize;
     }
 
     &__text{
@@ -17,6 +17,7 @@
 
     &--with-subline{
         position: relative;
+        margin-bottom: 50px;
 
         &::after{
             @include centerer-x();

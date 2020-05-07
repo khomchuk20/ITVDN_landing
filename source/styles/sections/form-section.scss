@@ -1,0 +1,97 @@
+.form-section{
+    padding: 100px 0;
+    color: #fff;
+    background-color: #1287bf;
+
+    .btn-down{
+        position: relative;
+        margin: auto auto 20px;
+        width: 65px;
+        height: 65px;
+        border: 2px solid #fff;
+        border-radius: 50%;
+    }
+
+    .arrow-down{
+        @include centerer-xy();
+
+        .fa{
+            font-size: 2.5rem;
+        }
+    }
+
+    .form{
+        position: relative;
+        width: 65vw;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 50px 65px 50px;
+        background-color: #fff;
+        color: #828282;
+        border-radius: 3px;
+
+        &-container{
+            padding-top: 30px;
+        }
+
+        &::before{
+            @include centerer-x();
+
+            content: '';
+            border: 30px solid transparent;
+            border-bottom: 30px solid #fff;
+            top: -59px;
+        }
+
+        &__close-button{
+            padding: 0 0 3px 0;
+            position: absolute;
+            right: -25px;
+            top: -25px;
+            width: 50px;
+            height: 50px;
+            background-color: $main-red;
+            border: 2px solid #fff;
+            color: #fff;
+            font-size: 2rem;
+            line-height: 1;
+            border-radius: 50%;
+            text-align: center;
+            transition: 0.3s;
+
+            &:hover{
+                background-color: lighten($main-red, 20%);
+            }
+        }
+
+        &__text{
+            text-align: center;
+            font-size: 1rem;
+            margin-bottom: 40px;
+            line-height: 1.5;
+        }
+
+        &__fields{
+            width: 45vw;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 25px;
+        }
+
+        &__input{
+            padding: 20px;
+            border-radius: 3px;
+            border: 1px solid #d8d8d8;
+            font-size: 0.8rem;
+            color: #d8d8d8;
+            margin-bottom: 10px;
+
+            &:focus{
+                box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+            }
+        }
+    }
+}
