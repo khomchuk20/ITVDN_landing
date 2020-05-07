@@ -5,7 +5,7 @@
 
     .btn-down{
         position: relative;
-        margin: auto auto 20px;
+        margin: 20px auto 20px;
         width: 65px;
         height: 65px;
         border: 2px solid #fff;
@@ -90,7 +90,9 @@
             margin-bottom: 10px;
 
             &:focus{
-                box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 0 5px 1px rgba(18,135,191, 0.5);
+                outline: none;
+                border: 1px solid #1287bf;
             }
         }
     }

@@ -30,4 +30,14 @@
     &--uppercase{
         text-transform: uppercase;
     }
+
+    &--transparent{
+        border: 1px solid #515151;
+        background-color: transparent;
+
+        &:hover{
+            border-color: $main-red;
+            color: $main-red;
+        }
+    }
 }
